@@ -1,0 +1,75 @@
+// JS File
+
+function addInput(container, label) {
+    const inputLabel = document.createElement('label');
+    inputLabel.textContent = `${label}:`;
+    inputLabel.style.textAlign = 'right';
+
+    const inputElement = document.createElement('input');
+    inputElement.type = 'number';
+    inputElement.placeholder = `Enter ${label.toLowerCase()}`;
+
+    // Format the input as USD
+    inputElement.addEventListener('input', function () {
+        this.value = formatAsUSD(this.value);
+        updateTotal(container); 
+    });
+
+     //Append the label and input
+    container.appendChild(inputLabel);
+    container.appendChild(inputElement);
+
+    // Add a line break
+    container.appendChild(document.createElement('br'));
+    }
+
+function addItem(containerId) {
+    const container = document.getElementById(containerId);
+
+    if (containerId === 'currentAssetsContainer') {
+        addInput(container, 'Cash');
+        addInput(container, 'Inventory');
+        addInput(container, 'Supplies');
+        addInput(container, 'Temporary Investments');
+        //addInput(container, 'Total');
+        container.appendChild(document.createElement('br'));
+        
+    } else if (containerId === 'investmentPropertyContainer') {
+        addInput(container, 'Land');
+        addInput(container, 'Building and Improvements');
+        addInput(container, 'Equipment');
+        addInput(container, 'Temporary Investments');
+        //addInput(container, 'Total');
+        container.appendChild(document.createElement('br'));
+    } else if (containerId === 'assetsContainer') {
+        addInput(container, 'Trade Names');
+        addInput(container, 'Goodwill');
+        //addInput(container, 'Total');
+    } else if (containerId === 'currentLiabilities') {
+        addInput(container, 'Accounts Payable');
+        addInput(container, 'Notes Payable');
+        addInput(container, 'Interest Payable');
+        addInput(container, 'Wages Payable');
+        addInput(container, 'Accrued Expenses');
+        //addInput(container, 'Total');
+    } else if (containerId === 'Long-TermLiabilities') {
+        addInput(container, 'Notes Payable');
+        addInput(container, 'Bonds Payable');
+        //addInput(container, 'Total');
+    }
+}
+function calculateCurrentAssetsTotal(){
+    var TotalAssets;
+    var Cash;
+    var Inventory;
+    var Supplies;
+    var TemporaryInvestments;
+
+    Cash = container, 'cash';
+
+
+
+    TotalAssets= 'cash'
+
+
+}

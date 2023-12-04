@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Balance Sheet Calculator</title>
+    <link rel="stylesheet" href="C:\Users\steph\OneDrive\Old\Desktop\CS311_Project6_SEB\CSS\styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Bellarmine Financials- Balance Sheet Calculator</h1>
+    </header>
+
+    <main class="BalanceSheet">
+        <div class="column">
+            <h2><label for="assets">Assets:</label></h2>
+            <div class="container1" id="currentAssetsContainer">
+                <h4>Current Assets<br></h4>
+            </div>
+            <button onclick="addItem('currentAssetsContainer')">Add Current Asset</button>
+            <div class="container1" id="investmentPropertyContainer">
+                <h4>Investment Property and equipment</h4>
+            </div>
+            <button onclick="addItem('investmentPropertyContainer')">Add Investment Property and Equipment</button>
+            <div class="container1" id="assetsContainer">
+                <h4> Assets</h4>
+            </div>
+            <button onclick="addItem('assetsContainer')">Add Assets</button>
+        </div>
+
+        <div class="column">
+            <h2><label for="liabilities">Liabilities:</label></h2>
+            <div class="container1" id="currentLiabilities">
+                <h4>Current Liabilities</h4>
+            </div>
+            <button onclick="addItem('currentLiabilities')">Add Current Liabilities</button>
+            <div class="container1" id="Long-TermLiabilities">
+                <h4>Long-Term Liabilities</h4>
+            </div>
+            <button onclick="addItem('Long-TermLiabilities')">Add Long-Term Liabilities</button>
+            <div class="totals-container">
+                <h3> Total Position</h3>
+                <button onclick="calculateTotal()">Calculate Total</button>
+                <p>Total Assets: <span id="totalAssets">TotalAssets</span></p>
+                <p>Total Liabilities: <span id="totalLiabilities"></span></p>
+                <p>Total Position: <span id="totalPosition"></span></p>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>&copy;Bellarmine University 2023</p>
+    </footer>
+
+    <script src="C:\Users\steph\OneDrive\Old\Desktop\CS311_Project6_SEB\JS\JS"></script>
+
+</body>
+
+</html>
